@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to the Tuberculosis Detection Website</h1>
+<p>Choose an option below to proceed:</p>
+
+<div class="button-group">
+    <a href="{{ url_for('background') }}" class="btn">Learn About Tuberculosis</a>
+    <a href="{{ url_for('upload') }}" class="btn">Upload a Chest Scan</a>
+</div>
+{% endblock %}
