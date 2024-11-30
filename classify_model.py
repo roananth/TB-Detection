@@ -1,7 +1,3 @@
-import torch
-import torch.nn as nn
-from torchvision import models
-
 class ClassifyModel(nn.Module):
     def __init__(self, num_classes):
         super(ClassifyModel, self).__init__()
