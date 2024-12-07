@@ -3,6 +3,11 @@
 <h1>Prediction Result</h1>
 <p>The model has analyzed the image and determined that:</p>
 <p><strong>{{ result['prediction'] }}</strong></p>
-<a href="{{ url_for('upload') }}" class="btn">Upload Another Image</a>
-<a href="{{ url_for('index') }}" class="btn">Back to Home</a>
+
+{% if result['image_url'] %}
+    <img src="{{ url_for('static', filename=result['image_url']) }}" alt="Uploaded Image" style="max-width: 300px;">
+{% endif %}
+
+<a href="{{ url_for('upload') }}">Upload Another Image</a>
+<a href="{{ url_for('index') }}">Back to Home</a>
 {% endblock %}
